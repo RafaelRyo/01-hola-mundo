@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col">
+    <h1>*ngIf</h1>
+    <hr>
+    <!--de esta forma se utiliza el ngIf para mostrar o ocultar algo en la pagina -->
+    <div *ngIf="mostrar" class="card text-white bg-primary mb-3" style="width: 100%;">
+<!-- En class= "card-title" sito el objeto frase que esta en body.component.ts los mismo en card-text -->
+  <div class="card-body">
+    <h5 class="card-title">{{frase.autor}}</h5>
+    <p class="card-text">{{frase.mensaje}}</p>
+  </div>
+</div>
+<!-- para activar un evento en el boton hago ()  -->
+<button (click)=" mostrar = !mostrar " class="btn btn-Outline-primary btn-block">
+  Mostrar/Ocultar
+</button>
+</div>
+<!--ESta parte es del ngFOr -->
+<div class="col">
+  <h1>*ngFor</h1>
+  <hr>
+
+  <ul class="list-group">
+<!--de esta forma se utiliza el ngFOr -->
+<!--El index se utiliza con el ngFOr para que enumere los elementos que hay en el arreglo -->
+  <li *ngFor="let personaje of personajes; let i=index " class="list-group-item">
+    {{i+1}} {{personaje}}
+  </li>
+</ul>
+
+</div>
+</div>
